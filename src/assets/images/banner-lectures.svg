@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 600" width="1600" height="600">
+  <rect width="1600" height="600" fill="#12100c"/>
+
+  <!-- raking light falling across the wall from the upper left -->
+  <g fill="#1c1813">
+    <polygon points="60,0 300,0 140,600 -100,600"/>
+    <polygon points="620,0 760,0 600,600 460,600"/>
+    <polygon points="1180,0 1520,0 1360,600 1020,600"/>
+  </g>
+
+  <!-- bench the two panels stand on -->
+  <rect x="0" y="498" width="1600" height="102" fill="#0b0906"/>
+  <rect x="0" y="498" width="1600" height="5" fill="#8a5c13"/>
+
+  <!-- the original, and beside it the copy: same picture twice -->
+  <g>
+    <g transform="translate(340,128)">
+      <rect width="380" height="356" fill="#8a5c13"/>
+      <rect x="17" y="17" width="346" height="322" fill="#1c1813"/>
+      <circle cx="190" cy="132" r="50" fill="#b97d1c"/>
+      <path d="M108 326 Q108 218 190 214 Q272 218 272 326 Z" fill="#b97d1c"/>
+      <path d="M168 214 L190 258 L212 214 Z" fill="#d9a441"/>
+      <!-- signature: an even, practised rhythm -->
+      <polyline points="56,300 76,276 96,300 116,276 136,300 156,276 176,300"
+        fill="none" stroke="#d9a441" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+    </g>
+
+    <g transform="translate(840,128)">
+      <rect width="380" height="356" fill="#8a5c13"/>
+      <rect x="17" y="17" width="346" height="322" fill="#1c1813"/>
+      <circle cx="190" cy="132" r="50" fill="#b97d1c"/>
+      <path d="M108 326 Q108 218 190 214 Q272 218 272 326 Z" fill="#b97d1c"/>
+      <path d="M168 214 L190 258 L212 214 Z" fill="#d9a441"/>
+      <!-- the same signature, copied: the spacing drifts -->
+      <polyline points="56,300 79,278 94,300 120,272 134,300 160,280 176,300"
+        fill="none" stroke="#d9a441" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+    </g>
+  </g>
+
+  <!-- the loupe, held over the copy's signature -->
+  <g>
+    <rect x="1128" y="404" width="150" height="26" rx="13" fill="#8a5c13"
+      transform="rotate(34 1128 404)"/>
+    <circle cx="1030" cy="392" r="112" fill="#12100c"/>
+    <clipPath id="lens">
+      <circle cx="1030" cy="392" r="112"/>
+    </clipPath>
+    <g clip-path="url(#lens)">
+      <rect x="918" y="280" width="224" height="224" fill="#1c1813"/>
+      <!-- the drifting stroke, enlarged until the drift is obvious -->
+      <polyline points="922,438 984,378 1024,438 1094,362 1132,438"
+        fill="none" stroke="#d9a441" stroke-width="14" stroke-linecap="round" stroke-linejoin="round"/>
+      <polyline points="922,472 1142,472" fill="none" stroke="#8a5c13" stroke-width="6"/>
+    </g>
+    <circle cx="1030" cy="392" r="112" fill="none" stroke="#b97d1c" stroke-width="16"/>
+    <circle cx="1030" cy="392" r="96" fill="none" stroke="#f2e6cf" stroke-width="2" opacity="0.5"/>
+  </g>
+</svg>
