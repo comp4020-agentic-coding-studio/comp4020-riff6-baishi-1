@@ -1,0 +1,294 @@
+---
+interface WeekEffort {
+  week: number;
+  label: string;
+  hours: number;
+}
+
+// Rough independent-study hours a week asks for, on top of the studio
+// session itself — the thing the schedule implies but never states.
+const data: WeekEffort[] = [
+  { week: 1, label: "Getting started", hours: 3 },
+  { week: 2, label: "First review", hours: 4 },
+  { week: 3, label: "Materials and marks", hours: 5 },
+  { week: 4, label: "Bench time", hours: 7 },
+  { week: 5, label: "Copying a hand", hours: 6 },
+  { week: 6, label: "Assignment work time", hours: 8 },
+  { week: 7, label: "The convincing copy crit", hours: 4 },
+  { week: 8, label: "Bench time II", hours: 7 },
+  { week: 9, label: "The tell begins", hours: 5 },
+  { week: 10, label: "The tell work time", hours: 8 },
+  { week: 11, label: "Provenance work time", hours: 9 },
+  { week: 12, label: "Final crit", hours: 5 },
+];
+
+const maxHours = Math.max(...data.map((d) => d.hours));
+const chartHeight = 160;
+const barWidth = 24;
+const gap = 12;
+const chartWidth = data.length * (barWidth + gap) - gap;
+---
+
+<section class="viz-root" aria-labelledby="weekly-effort-heading">
+  <h3 id="weekly-effort-heading">Independent hours expected, by week</h3>
+  <p class="viz-subtitle">
+    On top of the studio session itself — a rough guide, not a promise.
+  </p>
+
+  <div class="viz-chart-wrap">
+    <svg
+      class="viz-svg"
+      viewBox={`0 0 ${chartWidth} ${chartHeight + 24}`}
+      role="img"
+      aria-label="Bar chart of independent study hours expected per week, from 3 hours in week 1 to a peak of 9 hours in week 11"
+    >
+      <line
+        x1="0"
+        y1={chartHeight}
+        x2={chartWidth}
+        y2={chartHeight}
+        class="viz-baseline"
+      />
+      {
+        data.map((d, i) => {
+          const x = i * (barWidth + gap);
+          const h = (d.hours / maxHours) * (chartHeight - 8);
+          const y = chartHeight - h;
+          return (
+            <g
+              class="viz-bar-group"
+              tabindex="0"
+              data-hours={d.hours}
+              data-label={d.label}
+              data-week={d.week}
+            >
+              <rect
+                x={x}
+                y={y}
+                width={barWidth}
+                height={h}
+                rx="4"
+                ry="4"
+                class="viz-bar"
+              />
+              <rect x={x} y={y + h - 4} width={barWidth} height="4" class="viz-bar-square" />
+              <text
+                x={x + barWidth / 2}
+                y={chartHeight + 16}
+                class="viz-tick"
+                text-anchor="middle"
+              >
+                {d.week}
+              </text>
+            </g>
+          );
+        })
+      }
+    </svg>
+    <div class="viz-tooltip" hidden></div>
+  </div>
+
+  <p class="viz-axis-label">Week</p>
+
+  <details class="viz-table-toggle">
+    <summary>View as table</summary>
+    <table>
+      <thead>
+        <tr>
+          <th scope="col">Week</th>
+          <th scope="col">Studio</th>
+          <th scope="col">Independent hours</th>
+        </tr>
+      </thead>
+      <tbody>
+        {
+          data.map((d) => (
+            <tr>
+              <td>{d.week}</td>
+              <td>{d.label}</td>
+              <td>{d.hours}</td>
+            </tr>
+          ))
+        }
+      </tbody>
+    </table>
+  </details>
+</section>
+
+<style>
+  .viz-root {
+    color-scheme: light;
+    --viz-surface: #fcfcfb;
+    --viz-text-primary: #0b0b0b;
+    --viz-text-secondary: #52514e;
+    --viz-text-muted: #898781;
+    --viz-gridline: #e1e0d9;
+    --viz-baseline: #c3c2b7;
+    --viz-series-1: #2a78d6;
+
+    margin-block: 2rem;
+    padding: 1.25rem 1.5rem 1.5rem;
+    border-radius: 0.75rem;
+    background: var(--viz-surface);
+    border: 1px solid var(--viz-gridline);
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root:where(:not([data-theme="light"])) .viz-root {
+      color-scheme: dark;
+      --viz-surface: #1a1a19;
+      --viz-text-primary: #ffffff;
+      --viz-text-secondary: #c3c2b7;
+      --viz-text-muted: #898781;
+      --viz-gridline: #2c2c2a;
+      --viz-baseline: #383835;
+      --viz-series-1: #3987e5;
+    }
+  }
+
+  :root[data-theme="dark"] .viz-root {
+    color-scheme: dark;
+    --viz-surface: #1a1a19;
+    --viz-text-primary: #ffffff;
+    --viz-text-secondary: #c3c2b7;
+    --viz-text-muted: #898781;
+    --viz-gridline: #2c2c2a;
+    --viz-baseline: #383835;
+    --viz-series-1: #3987e5;
+  }
+
+  .viz-root h3 {
+    margin-block: 0 0.15rem;
+    color: var(--viz-text-primary);
+  }
+
+  .viz-subtitle {
+    margin-block: 0 1rem;
+    color: var(--viz-text-secondary);
+    font-size: 0.9rem;
+  }
+
+  .viz-chart-wrap {
+    position: relative;
+    overflow-x: auto;
+  }
+
+  .viz-svg {
+    width: 100%;
+    height: auto;
+    max-width: 480px;
+    display: block;
+  }
+
+  .viz-baseline {
+    stroke: var(--viz-baseline);
+    stroke-width: 1;
+  }
+
+  .viz-bar {
+    fill: var(--viz-series-1);
+  }
+
+  .viz-bar-square {
+    fill: var(--viz-series-1);
+  }
+
+  .viz-bar-group:hover .viz-bar,
+  .viz-bar-group:hover .viz-bar-square,
+  .viz-bar-group:focus-visible .viz-bar,
+  .viz-bar-group:focus-visible .viz-bar-square {
+    opacity: 0.8;
+  }
+
+  .viz-bar-group:focus-visible {
+    outline: 2px solid var(--viz-series-1);
+    outline-offset: 2px;
+  }
+
+  .viz-tick {
+    fill: var(--viz-text-muted);
+    font-size: 9px;
+  }
+
+  .viz-axis-label {
+    margin-block: 0.25rem 0;
+    color: var(--viz-text-muted);
+    font-size: 0.8rem;
+    text-align: center;
+  }
+
+  .viz-tooltip {
+    position: absolute;
+    pointer-events: none;
+    transform: translate(-50%, -100%);
+    background: var(--viz-text-primary);
+    color: var(--viz-surface);
+    padding: 0.35rem 0.6rem;
+    border-radius: 0.35rem;
+    font-size: 0.8rem;
+    white-space: nowrap;
+    z-index: 1;
+  }
+
+  .viz-table-toggle {
+    margin-top: 1rem;
+    color: var(--viz-text-secondary);
+    font-size: 0.9rem;
+  }
+
+  .viz-table-toggle table {
+    margin-top: 0.75rem;
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.85rem;
+  }
+
+  .viz-table-toggle th,
+  .viz-table-toggle td {
+    text-align: left;
+    padding: 0.35rem 0.5rem;
+    border-bottom: 1px solid var(--viz-gridline);
+    color: var(--viz-text-primary);
+  }
+
+  .viz-table-toggle td:last-child,
+  .viz-table-toggle th:last-child {
+    font-variant-numeric: tabular-nums;
+    text-align: right;
+  }
+</style>
+
+<script>
+  function initWeeklyEffort() {
+    for (const wrap of document.querySelectorAll<HTMLElement>(".viz-chart-wrap")) {
+      if (wrap.dataset.vizInitialized) continue;
+      wrap.dataset.vizInitialized = "true";
+
+      const tooltip = wrap.querySelector<HTMLElement>(".viz-tooltip");
+      if (!tooltip) continue;
+
+      const show = (group: HTMLElement) => {
+        const { hours, label, week } = group.dataset;
+        tooltip.textContent = `Week ${week} — ${label}: ${hours}h`;
+        const rect = group.getBoundingClientRect();
+        const wrapRect = wrap.getBoundingClientRect();
+        tooltip.style.left = `${rect.left - wrapRect.left + rect.width / 2}px`;
+        tooltip.style.top = `${rect.top - wrapRect.top - 6}px`;
+        tooltip.hidden = false;
+      };
+      const hide = () => {
+        tooltip.hidden = true;
+      };
+
+      for (const group of wrap.querySelectorAll<HTMLElement>(".viz-bar-group")) {
+        group.addEventListener("mouseenter", () => show(group));
+        group.addEventListener("mouseleave", hide);
+        group.addEventListener("focus", () => show(group));
+        group.addEventListener("blur", hide);
+      }
+    }
+  }
+
+  initWeeklyEffort();
+  document.addEventListener("astro:page-load", initWeeklyEffort);
+</script>

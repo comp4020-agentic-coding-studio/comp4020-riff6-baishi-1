@@ -2,6 +2,7 @@
 import Card from "astro-theme-university/components/Card.astro";
 import CardGrid from "astro-theme-university/components/CardGrid.astro";
 import ContentLayout from "astro-theme-university/layouts/ContentLayout.astro";
+import WeeklyEffort from "../components/WeeklyEffort.astro";
 import heroImage from "../assets/images/hero-home.avif";
 import { courseMeta } from "../course-config";
 import { sessionLabels, siteConfig } from "../site-config";
@@ -43,6 +44,8 @@ import { sessionLabels, siteConfig } from "../site-config";
     honest appetite for being told, in public, exactly where your fake didn't
     hold up.
   </p>
+
+  <WeeklyEffort />
 
   <h2>Where to go next</h2>
   <CardGrid columns={2}>
