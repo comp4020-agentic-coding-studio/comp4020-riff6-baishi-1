@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 600" width="1600" height="600">
+  <rect width="1600" height="600" fill="#12100c"/>
+
+  <!-- raking light across the crit wall -->
+  <g fill="#1c1813">
+    <polygon points="90,0 330,0 190,600 -50,600"/>
+    <polygon points="700,0 840,0 700,600 560,600"/>
+    <polygon points="1280,0 1600,0 1460,600 1140,600"/>
+  </g>
+
+  <!-- the picture rail, and the wires the three works hang on -->
+  <rect x="0" y="58" width="1600" height="9" fill="#8a5c13"/>
+  <g stroke="#8a5c13" stroke-width="3">
+    <path d="M250 67 L250 120 M510 67 L510 120"/>
+    <path d="M650 67 L650 120 M910 67 L910 120"/>
+    <path d="M1060 67 L1060 90 M1380 67 L1380 90"/>
+  </g>
+
+  <!-- the convincing copy: a made object, judged as craft -->
+  <rect x="220" y="120" width="320" height="270" fill="#1c1813" stroke="#8a5c13" stroke-width="5"/>
+  <circle cx="380" cy="208" r="38" fill="#b97d1c"/>
+  <path d="M320 372 Q320 290 380 287 Q440 290 440 372 Z" fill="#b97d1c"/>
+  <path d="M364 287 L380 320 L396 287 Z" fill="#d9a441"/>
+
+  <!-- the tell: a written case against a sample, with the detail it turns on -->
+  <rect x="620" y="120" width="320" height="270" fill="#1c1813" stroke="#8a5c13" stroke-width="5"/>
+  <g fill="#8a5c13">
+    <rect x="650" y="156" width="260" height="8"/>
+    <rect x="650" y="182" width="260" height="8"/>
+    <rect x="650" y="208" width="260" height="8"/>
+    <rect x="650" y="234" width="214" height="8"/>
+    <rect x="650" y="260" width="260" height="8"/>
+    <rect x="650" y="286" width="148" height="8"/>
+  </g>
+  <circle cx="862" cy="330" r="44" fill="#12100c"/>
+  <path d="M832 344 L850 318 L862 344 L882 314 L892 340" fill="none" stroke="#d9a441"
+    stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="862" cy="330" r="44" fill="none" stroke="#b97d1c" stroke-width="7"/>
+
+  <!-- provenance: the object and the history built to match it -->
+  <rect x="1020" y="90" width="400" height="320" fill="#1c1813" stroke="#8a5c13" stroke-width="5"/>
+  <circle cx="1120" cy="216" r="56" fill="#b97d1c"/>
+  <circle cx="1120" cy="216" r="38" fill="#1c1813"/>
+  <circle cx="1120" cy="216" r="20" fill="#d9a441"/>
+  <rect x="1078" y="292" width="84" height="14" fill="#8a5c13"/>
+  <rect x="1228" y="134" width="164" height="232" fill="#f2e6cf" opacity="0.9"/>
+  <g fill="#8a5c13">
+    <rect x="1246" y="158" width="128" height="7"/>
+    <rect x="1246" y="180" width="128" height="7"/>
+    <rect x="1246" y="202" width="96" height="7"/>
+    <rect x="1246" y="238" width="128" height="7"/>
+    <rect x="1246" y="260" width="110" height="7"/>
+  </g>
+  <path d="M1246 306 Q1266 288 1284 306 Q1302 324 1322 300" fill="none" stroke="#12100c"
+    stroke-width="4" stroke-linecap="round"/>
+  <circle cx="1358" cy="332" r="24" fill="#b97d1c"/>
+  <circle cx="1358" cy="332" r="12" fill="#8a5c13"/>
+
+  <!-- what each one is worth: three tracks, filled 30, 30 and 40 -->
+  <g fill="#1c1813">
+    <rect x="220" y="440" width="128" height="14"/>
+    <rect x="620" y="440" width="128" height="14"/>
+    <rect x="1020" y="440" width="128" height="14"/>
+  </g>
+  <g fill="#d9a441">
+    <rect x="220" y="440" width="96" height="14"/>
+    <rect x="620" y="440" width="96" height="14"/>
+    <rect x="1020" y="440" width="128" height="14"/>
+  </g>
+</svg>
