@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 600" width="1600" height="600">
+  <rect width="1600" height="600" fill="#12100c"/>
+
+  <!-- raking light behind the bench -->
+  <g fill="#1c1813">
+    <polygon points="40,0 280,0 140,470 -100,470"/>
+    <polygon points="620,0 760,0 620,470 480,470"/>
+    <polygon points="1120,0 1440,0 1300,470 980,470"/>
+  </g>
+
+  <!-- the painter, brush raised -->
+  <g>
+    <path d="M272 470 Q272 332 380 326 Q488 332 488 470 Z" fill="#b97d1c"/>
+    <circle cx="380" cy="232" r="56" fill="#b97d1c"/>
+    <path d="M324 224 Q330 166 380 166 Q430 166 436 224 Q408 196 380 200 Q352 204 324 224 Z"
+      fill="#8a5c13"/>
+    <path d="M462 452 L472 318" stroke="#8a5c13" stroke-width="26" stroke-linecap="round"/>
+    <path d="M472 318 L500 232" stroke="#d9a441" stroke-width="13" stroke-linecap="round"/>
+    <polygon points="494,230 512,236 504,192" fill="#f2e6cf"/>
+  </g>
+
+  <!-- the connoisseur, loupe to the eye -->
+  <g>
+    <path d="M700 470 Q700 338 800 332 Q900 338 900 470 Z" fill="#8a5c13"/>
+    <circle cx="800" cy="238" r="56" fill="#8a5c13"/>
+    <rect x="762" y="330" width="76" height="10" fill="#12100c"/>
+    <path d="M876 456 L852 292" stroke="#b97d1c" stroke-width="26" stroke-linecap="round"/>
+    <rect x="846" y="262" width="66" height="16" rx="8" fill="#b97d1c"
+      transform="rotate(38 846 262)"/>
+    <circle cx="836" cy="228" r="36" fill="#12100c"/>
+    <circle cx="836" cy="228" r="36" fill="none" stroke="#d9a441" stroke-width="10"/>
+    <circle cx="828" cy="218" r="10" fill="#f2e6cf" opacity="0.5"/>
+  </g>
+
+  <!-- the engraver, burin in hand -->
+  <g>
+    <path d="M1100 470 Q1100 328 1220 322 Q1340 328 1340 470 Z" fill="#b97d1c"/>
+    <circle cx="1220" cy="228" r="56" fill="#b97d1c"/>
+    <circle cx="1166" cy="196" r="26" fill="#8a5c13"/>
+    <path d="M1316 450 L1296 330" stroke="#8a5c13" stroke-width="26" stroke-linecap="round"/>
+    <ellipse cx="1296" cy="322" rx="30" ry="21" fill="#b97d1c"/>
+    <path d="M1312 306 L1368 246" stroke="#d9a441" stroke-width="9" stroke-linecap="round"/>
+    <polygon points="1362,242 1374,252 1388,230" fill="#f2e6cf"/>
+  </g>
+
+  <!-- the bench they all work at -->
+  <rect x="0" y="470" width="1600" height="12" fill="#b97d1c"/>
+  <rect x="0" y="482" width="1600" height="118" fill="#0b0906"/>
+</svg>
