@@ -1,6 +1,7 @@
 import { defineSiteConfig } from "astro-theme-university/types";
 import { slopBranding } from "astro-theme-slop";
 import { courseMeta } from "./course-config";
+import { versionLine } from "./version";
 
 // The underlying collection and URL remain `sessions`. This course teaches a
 // hands-on craft, so the weekly meeting is a workbench, not a seminar: the
@@ -30,6 +31,7 @@ export const siteConfig = defineSiteConfig({
   ],
 
   licence: "CC-BY-NC-SA-4.0",
+  meta: [versionLine],
   socialImage: "/src/assets/images/card.png",
   socialImageAlt: `A preview card for ${courseMeta.code}: ${courseMeta.title}`,
 });
