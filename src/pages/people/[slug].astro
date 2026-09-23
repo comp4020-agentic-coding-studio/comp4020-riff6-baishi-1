@@ -1,4 +1,5 @@
 ---
+import { Image } from "astro:assets";
 import { render } from "astro:content";
 import { getPublishedCollection } from "astro-course-university/content";
 import ContentLayout from "astro-theme-university/layouts/ContentLayout.astro";
@@ -30,14 +31,21 @@ const photoAlt = typeof rawPhotoAlt === "string" ? rawPhotoAlt : "";
 const description = person.data.description;
 ---
 
-<ContentLayout
-  title={person.data.title}
-  description={description}
-  heroImage={person.data.photo ?? undefined}
-  heroImageAlt={photoAlt}
-  {...siteConfig}
->
-  <dl>
+<ContentLayout title={person.data.title} description={description} {...siteConfig}>
+  <div class="person-header">
+    {
+      person.data.photo && (
+        <Image
+          src={person.data.photo}
+          alt={photoAlt}
+          widths={[220, 440]}
+          sizes="220px"
+          class="person-portrait"
+        />
+      )
+    }
+
+    <dl>
     {roleLabel && (
       <>
         <dt>Role</dt>
@@ -66,9 +74,36 @@ const description = person.data.description;
         </dd>
       </>
     )}
-    <dt>Contact</dt>
-    <dd>{person.data.contact}</dd>
-  </dl>
+      <dt>Contact</dt>
+      <dd>{person.data.contact}</dd>
+    </dl>
+  </div>
 
   <Content />
 </ContentLayout>
+
+<style>
+  /* The portrait is 4:5 art, not a landscape hero crop: pin it to a modest
+     column so the whole figure stays visible instead of being sliced by the
+     full-bleed hero's object-fit. */
+  .person-header {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: start;
+    gap: var(--at-spacing-xl, 2rem);
+    margin-block-end: var(--at-spacing-xl, 2rem);
+  }
+
+  .person-portrait {
+    flex: 0 0 auto;
+    width: 220px;
+    height: auto;
+    border-radius: var(--at-border-radius, 0.5rem);
+    background: var(--at-bg-alt);
+  }
+
+  .person-header dl {
+    flex: 1 1 22rem;
+    margin: 0;
+  }
+</style>
