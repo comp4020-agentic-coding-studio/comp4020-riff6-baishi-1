@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 1200" width="960" height="1200">
+  <title>Dr Naledi Osei</title>
+  <rect width="960" height="1200" fill="#f2e6cf"/>
+
+  <!-- backdrop: a spectral grid, the synthetic-media weeks' own instrument -->
+  <rect x="104" y="104" width="752" height="752" fill="#e8d8ba"/>
+  <rect x="104" y="104" width="752" height="752" fill="none" stroke="#8a5c13" stroke-width="10"/>
+  <g stroke="#8a5c13" stroke-width="4" opacity="0.28">
+    <path d="M104 254h752M104 404h752M104 554h752M104 704h752"/>
+    <path d="M254 104v752M404 104v752M554 104v752M704 104v752"/>
+  </g>
+  <!-- a waveform running behind the head: the tell is in the rhythm -->
+  <path d="M104 330q38-96 76 0t76 0q38-96 76 0t76 0q38-96 76 0t76 0q38-96 76 0t76 0q38-96 76 0"
+        fill="none" stroke="#b97d1c" stroke-width="9" opacity="0.6"/>
+  <circle cx="480" cy="430" r="244" fill="#b97d1c" opacity="0.16"/>
+  <path d="M0 0 320 0 0 580Z" fill="#f7eedd" opacity="0.7"/>
+
+  <!-- shoulders -->
+  <path d="M228 1200c0-228 112-354 252-354s252 126 252 354Z" fill="#12100c"/>
+  <!-- open collar and a lapel -->
+  <path d="M396 866l84 118 84-118-46-22-76 0Z" fill="#f2e6cf"/>
+  <path d="M412 874 480 984 548 874" fill="none" stroke="#8a5c13" stroke-width="9" stroke-linejoin="round"/>
+  <path d="M320 1014c20 62 28 120 28 186M640 1014c-20 62-28 120-28 186" fill="none" stroke="#8a5c13" stroke-width="7" opacity="0.8"/>
+
+  <!-- neck -->
+  <path d="M438 756h84v110h-84Z" fill="#8a5c13"/>
+
+  <!-- head -->
+  <ellipse cx="480" cy="612" rx="151" ry="180" fill="#12100c"/>
+  <!-- coiled braids, gathered high -->
+  <path d="M329 584c0-116 68-190 151-190s151 74 151 190c-26-60-82-94-151-94s-125 34-151 94Z" fill="#1c1813"/>
+  <g fill="#1c1813">
+    <circle cx="398" cy="404" r="46"/>
+    <circle cx="480" cy="378" r="52"/>
+    <circle cx="562" cy="404" r="46"/>
+    <circle cx="344" cy="470" r="38"/>
+    <circle cx="616" cy="470" r="38"/>
+  </g>
+  <g fill="none" stroke="#8a5c13" stroke-width="6" opacity="0.65">
+    <path d="M398 380v48M480 352v52M562 380v48"/>
+  </g>
+  <path d="M404 592h60M516 592h60" stroke="#d9a441" stroke-width="12" stroke-linecap="round"/>
+  <path d="M480 638v50" stroke="#8a5c13" stroke-width="9" stroke-linecap="round"/>
+  <!-- a single hoop earring -->
+  <circle cx="634" cy="672" r="30" fill="none" stroke="#d9a441" stroke-width="11"/>
+
+  <!-- the screen she is reading the sample off -->
+  <g transform="translate(736 856) rotate(-12)">
+    <rect x="-108" y="-78" width="216" height="156" rx="14" fill="#12100c"/>
+    <rect x="-90" y="-60" width="180" height="120" rx="6" fill="#f7eedd"/>
+    <path d="M-72 0q18-44 36 0t36 0q18-44 36 0t36 0" fill="none" stroke="#b97d1c" stroke-width="8"/>
+    <!-- the one cycle that does not match: the tell -->
+    <path d="M0 0q18-14 36 0" fill="none" stroke="#12100c" stroke-width="8"/>
+    <circle cx="18" cy="-10" r="13" fill="none" stroke="#8a5c13" stroke-width="6"/>
+  </g>
+  <path d="M624 902c40-20 82-20 102 6s6 62-30 76-78 2-94-26Z" fill="#8a5c13"/>
+</svg>

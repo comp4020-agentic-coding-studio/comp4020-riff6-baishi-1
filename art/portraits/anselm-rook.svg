@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 1200" width="960" height="1200">
+  <title>Anselm Rook</title>
+  <rect width="960" height="1200" fill="#f2e6cf"/>
+
+  <!-- the bench wall: a pegboard of hanging tools -->
+  <rect x="96" y="96" width="768" height="768" fill="#e8d8ba"/>
+  <rect x="96" y="96" width="768" height="768" fill="none" stroke="#8a5c13" stroke-width="10"/>
+  <g fill="#8a5c13" opacity="0.32">
+    <circle cx="176" cy="192" r="9"/><circle cx="296" cy="192" r="9"/><circle cx="664" cy="192" r="9"/><circle cx="784" cy="192" r="9"/>
+    <circle cx="176" cy="352" r="9"/><circle cx="296" cy="352" r="9"/><circle cx="664" cy="352" r="9"/><circle cx="784" cy="352" r="9"/>
+    <circle cx="176" cy="512" r="9"/><circle cx="784" cy="512" r="9"/>
+  </g>
+  <!-- a chisel and a scraper hanging on the left -->
+  <g transform="translate(206 230)">
+    <rect x="-13" y="0" width="26" height="128" rx="10" fill="#12100c"/>
+    <path d="M-13 128 13 128 6 190 -6 190Z" fill="#b97d1c"/>
+  </g>
+  <g transform="translate(754 230)">
+    <rect x="-13" y="0" width="26" height="112" rx="10" fill="#12100c"/>
+    <path d="M-26 112 26 112 26 158 -26 158Z" fill="#b97d1c"/>
+  </g>
+  <circle cx="480" cy="430" r="240" fill="#b97d1c" opacity="0.16"/>
+  <path d="M0 0 320 0 0 580Z" fill="#f7eedd" opacity="0.7"/>
+
+  <!-- shoulders, in a work apron -->
+  <path d="M224 1200c0-232 114-360 256-360s256 128 256 360Z" fill="#12100c"/>
+  <!-- apron bib and its straps -->
+  <path d="M364 968h232v232H364Z" fill="#8a5c13"/>
+  <path d="M408 872 380 968M552 872 580 968" fill="none" stroke="#8a5c13" stroke-width="16" stroke-linecap="round"/>
+  <!-- apron pocket with brushes standing in it -->
+  <rect x="404" y="1064" width="152" height="90" fill="#12100c"/>
+  <g stroke-linecap="round">
+    <path d="M436 1064v-92" stroke="#12100c" stroke-width="14"/>
+    <path d="M436 990v-34" stroke="#d9a441" stroke-width="18"/>
+    <path d="M480 1064v-120" stroke="#12100c" stroke-width="14"/>
+    <path d="M480 962v-38" stroke="#f2e6cf" stroke-width="18"/>
+    <path d="M524 1064v-84" stroke="#12100c" stroke-width="14"/>
+    <path d="M524 998v-30" stroke="#d9a441" stroke-width="18"/>
+  </g>
+
+  <!-- collar -->
+  <path d="M402 862l78 106 78-106-44-20-68 0Z" fill="#f2e6cf"/>
+  <!-- neck -->
+  <path d="M440 754h80v108h-80Z" fill="#8a5c13"/>
+
+  <!-- head -->
+  <ellipse cx="480" cy="610" rx="150" ry="178" fill="#12100c"/>
+  <!-- cropped hair and a short beard -->
+  <path d="M330 570c8-104 72-172 150-172s142 68 150 172c-34-52-86-80-150-80s-116 28-150 80Z" fill="#1c1813"/>
+  <path d="M352 646c14 96 66 152 128 152s114-56 128-152c-18 74-66 114-128 114s-110-40-128-114Z" fill="#1c1813"/>
+  <path d="M404 590h60M516 590h60" stroke="#d9a441" stroke-width="12" stroke-linecap="round"/>
+  <path d="M480 634v48" stroke="#8a5c13" stroke-width="9" stroke-linecap="round"/>
+
+  <!-- the engraver's burin, held low and forward -->
+  <g transform="translate(742 880) rotate(-32)">
+    <path d="M-34 0a34 46 0 0 0 68 0Z" fill="#12100c"/>
+    <rect x="-13" y="-150" width="26" height="152" fill="#b97d1c"/>
+    <path d="M-13-150 13-150 4-214 -4-214Z" fill="#d9a441"/>
+  </g>
+  <path d="M630 900c40-22 82-24 104 2s10 62-26 78-78 6-96-22Z" fill="#8a5c13"/>
+</svg>
